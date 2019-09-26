@@ -21,6 +21,7 @@
         <module>gupao-session-demo</module>
         <module>gupao-session-demo</module>
         <module>spring-boot-mybatis-demo</module>
+        <module>jvm-demo</module>
     </modules>
 
 
