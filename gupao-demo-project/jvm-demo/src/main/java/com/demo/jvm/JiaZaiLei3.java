@@ -11,6 +11,9 @@ public class JiaZaiLei3 {
         * Thread-1end
         * Thread-0end
         */
+       /**
+        * 执行这块代码的时候会有个指令码做同步操作
+        */
        static {
            System.out.println(Thread.currentThread().getName() + "init ...");
            try {
