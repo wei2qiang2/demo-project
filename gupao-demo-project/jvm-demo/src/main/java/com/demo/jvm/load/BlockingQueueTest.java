@@ -17,11 +17,13 @@ public class BlockingQueueTest {
 
         ExecutorService service = Executors.newCachedThreadPool();
 
+        //500个线程发消息
         for (int i = 0; i < 500; i++) {
             Producer producer = new Producer(queue);
             service.execute(producer);
         }
 
+        //5个线程去取
         for (int i = 0; i < 5 ; i++) {
             Consumer consumer = new Consumer(queue);
             service.execute(consumer);
