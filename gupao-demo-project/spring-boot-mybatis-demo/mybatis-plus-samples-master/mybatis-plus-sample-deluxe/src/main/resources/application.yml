@@ -14,7 +14,7 @@ logging:
     com.baomidou.mybatisplus.samples.deluxe: debug
 
 mybatis-plus:
-  # 扫描 mapper.xml
-  mapper-locations: classpath:/mapper/*Mapper.xml
+  # 扫描 mapper.mappers
+  mapper-locations: classpath:/mapper/*Mapper.mappers
   configuration:
     jdbc-type-for-null: 'null'

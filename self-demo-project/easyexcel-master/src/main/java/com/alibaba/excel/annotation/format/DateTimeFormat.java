@@ -22,7 +22,6 @@ import java.lang.annotation.Target;
 public @interface DateTimeFormat {
 
     /**
-     *
      * Specific format reference {@link java.text.SimpleDateFormat}
      *
      * @return Format pattern

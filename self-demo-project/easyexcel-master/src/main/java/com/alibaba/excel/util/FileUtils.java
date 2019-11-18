@@ -13,7 +13,6 @@ import com.alibaba.excel.exception.ExcelAnalysisException;
 import com.alibaba.excel.exception.ExcelGenerateException;
 
 /**
- *
  * @author jipengfei
  */
 public class FileUtils {
@@ -25,7 +24,8 @@ public class FileUtils {
     private static final String CACHE = "excache";
     private static final int WRITE_BUFF_SIZE = 8192;
 
-    private FileUtils() {}
+    private FileUtils() {
+    }
 
     /**
      * Reads the contents of a file into a byte array. * The file is always closed.
@@ -38,7 +38,7 @@ public class FileUtils {
         InputStream in = openInputStream(file);
         try {
             final long fileLength = file.length();
-            return fileLength > 0 ? IoUtils.toByteArray(in, (int)fileLength) : IoUtils.toByteArray(in);
+            return fileLength > 0 ? IoUtils.toByteArray(in, (int) fileLength) : IoUtils.toByteArray(in);
         } finally {
             in.close();
         }
@@ -107,6 +107,7 @@ public class FileUtils {
     }
 
     /**
+     *
      */
     public static void createPoiFilesDirectory() {
         createTmpDirectory(POIFILES);
@@ -158,7 +159,6 @@ public class FileUtils {
     }
 
     /**
-     *
      * @param directory
      */
     private static synchronized void syncCreatePoiFilesDirectory(File directory) {

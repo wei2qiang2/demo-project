@@ -27,13 +27,13 @@ public class ByteNumberConverter implements Converter<Byte> {
 
     @Override
     public Byte convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                  GlobalConfiguration globalConfiguration) {
         return cellData.getNumberValue().byteValue();
     }
 
     @Override
     public CellData convertToExcelData(Byte value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return new CellData(BigDecimal.valueOf(value));
     }
 

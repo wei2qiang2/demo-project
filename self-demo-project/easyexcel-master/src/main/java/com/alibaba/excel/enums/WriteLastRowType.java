@@ -17,5 +17,6 @@ public enum WriteLastRowType {
     /**
      * Any data has been written;
      */
-    HAS_DATA,;
+    HAS_DATA,
+    ;
 }

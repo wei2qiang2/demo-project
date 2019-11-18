@@ -44,7 +44,6 @@ public class WriteCellStyle {
     /**
      * Set whether the text should be wrapped. Setting this flag to <core>true</core> make all content visible within a
      * cell by displaying it on multiple lines
-     *
      */
     private Boolean wrapped;
     /**
@@ -53,7 +52,7 @@ public class WriteCellStyle {
     private VerticalAlignment verticalAlignment;
     /**
      * Set the degree of rotation for the text in the cell.
-     *
+     * <p>
      * Note: HSSF uses values from -90 to 90 degrees, whereas XSSF uses values from 0 to 180 degrees. The
      * implementations of this method will map between these two value-ranges accordingly, however the corresponding
      * getter is returning values in the range mandated by the current type of Excel file-format that this CellStyle is
@@ -92,7 +91,6 @@ public class WriteCellStyle {
      * Set the color to use for the right border
      *
      * @see IndexedColors
-     *
      */
     private Short rightBorderColor;
 
@@ -100,14 +98,12 @@ public class WriteCellStyle {
      * Set the color to use for the top border
      *
      * @see IndexedColors
-     *
      */
     private Short topBorderColor;
     /**
      * Set the color to use for the bottom border
      *
      * @see IndexedColors
-     *
      */
     private Short bottomBorderColor;
     /**
@@ -121,7 +117,6 @@ public class WriteCellStyle {
      * Set the background fill color.
      *
      * @see IndexedColors
-     *
      */
     private Short fillBackgroundColor;
 
@@ -129,7 +124,6 @@ public class WriteCellStyle {
      * Set the foreground fill color <i>Note: Ensure Foreground color is set prior to background color.</i>
      *
      * @see IndexedColors
-     *
      */
     private Short fillForegroundColor;
     /**

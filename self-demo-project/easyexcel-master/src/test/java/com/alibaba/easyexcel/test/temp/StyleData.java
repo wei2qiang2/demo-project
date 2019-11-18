@@ -5,7 +5,6 @@ import java.util.List;
 import lombok.Data;
 
 /**
- *
  * @author Jiaju Zhuang
  **/
 @Data

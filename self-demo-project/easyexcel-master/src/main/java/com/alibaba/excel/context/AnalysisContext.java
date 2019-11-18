@@ -13,7 +13,6 @@ import com.alibaba.excel.read.metadata.holder.ReadWorkbookHolder;
 import com.alibaba.excel.support.ExcelTypeEnum;
 
 /**
- *
  * A context is the main anchorage point of a excel reader.
  *
  * @author jipengfei
@@ -22,10 +21,8 @@ public interface AnalysisContext {
     /**
      * Select the current table
      *
-     * @param excelExecutor
-     *            Excel file Executor
-     * @param readSheet
-     *            sheet to read
+     * @param excelExecutor Excel file Executor
+     * @param readSheet     sheet to read
      */
     void currentSheet(ExcelExecutor excelExecutor, ReadSheet readSheet);
 
@@ -46,8 +43,7 @@ public interface AnalysisContext {
     /**
      * Set row of currently operated cell
      *
-     * @param readRowHolder
-     *            Current row holder
+     * @param readRowHolder Current row holder
      */
     void readRowHolder(ReadRowHolder readRowHolder);
 
@@ -82,7 +78,6 @@ public interface AnalysisContext {
     Sheet getCurrentSheet();
 
     /**
-     *
      * get excel type
      *
      * @return excel type

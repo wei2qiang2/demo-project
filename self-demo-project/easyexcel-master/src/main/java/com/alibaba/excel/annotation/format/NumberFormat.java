@@ -23,7 +23,6 @@ import java.math.RoundingMode;
 public @interface NumberFormat {
 
     /**
-     *
      * Specific format reference {@link java.text.DecimalFormat}
      *
      * @return Format pattern

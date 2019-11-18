@@ -27,13 +27,13 @@ public class IntegerNumberConverter implements Converter<Integer> {
 
     @Override
     public Integer convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                     GlobalConfiguration globalConfiguration) {
         return cellData.getNumberValue().intValue();
     }
 
     @Override
     public CellData convertToExcelData(Integer value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return new CellData(BigDecimal.valueOf(value));
     }
 

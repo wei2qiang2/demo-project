@@ -19,7 +19,8 @@ public class SyncReadListener extends AnalysisEventListener<Object> {
     }
 
     @Override
-    public void doAfterAllAnalysed(AnalysisContext context) {}
+    public void doAfterAllAnalysed(AnalysisContext context) {
+    }
 
     public List<Object> getList() {
         return list;

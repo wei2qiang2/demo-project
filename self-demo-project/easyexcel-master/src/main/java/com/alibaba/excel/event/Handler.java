@@ -5,4 +5,5 @@ package com.alibaba.excel.event;
  *
  * @author Jiaju Zhuang
  **/
-public interface Handler {}
+public interface Handler {
+}

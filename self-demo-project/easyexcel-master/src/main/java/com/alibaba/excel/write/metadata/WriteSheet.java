@@ -29,7 +29,6 @@ public class WriteSheet extends WriteBasicParameter {
     @Deprecated
     private Map<Integer, Integer> columnWidthMap = new HashMap<Integer, Integer>();
     /**
-     *
      * @deprecated please use{@link HorizontalCellStyleStrategy}
      */
     @Deprecated

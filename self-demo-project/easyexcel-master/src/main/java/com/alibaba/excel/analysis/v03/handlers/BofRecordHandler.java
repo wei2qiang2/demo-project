@@ -38,9 +38,9 @@ public class BofRecordHandler extends AbstractXlsRecordHandler {
     @Override
     public void processRecord(Record record) {
         if (record.getSid() == BoundSheetRecord.sid) {
-            boundSheetRecords.add((BoundSheetRecord)record);
+            boundSheetRecords.add((BoundSheetRecord) record);
         } else if (record.getSid() == BOFRecord.sid) {
-            BOFRecord br = (BOFRecord)record;
+            BOFRecord br = (BOFRecord) record;
             if (br.getType() == BOFRecord.TYPE_WORKSHEET) {
                 if (orderedBsrs == null) {
                     orderedBsrs = BoundSheetRecord.orderByBofPosition(boundSheetRecords);

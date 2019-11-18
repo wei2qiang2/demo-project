@@ -28,7 +28,7 @@ public class NumberRecordHandler extends AbstractXlsRecordHandler {
 
     @Override
     public void processRecord(Record record) {
-        NumberRecord numrec = (NumberRecord)record;
+        NumberRecord numrec = (NumberRecord) record;
         this.row = numrec.getRow();
         this.column = numrec.getColumn();
         this.cellData = new CellData(BigDecimal.valueOf(numrec.getValue()));

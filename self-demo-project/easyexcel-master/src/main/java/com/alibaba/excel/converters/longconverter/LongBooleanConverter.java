@@ -27,7 +27,7 @@ public class LongBooleanConverter implements Converter<Long> {
 
     @Override
     public Long convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                  GlobalConfiguration globalConfiguration) {
         if (cellData.getBooleanValue()) {
             return ONE;
         }
@@ -36,7 +36,7 @@ public class LongBooleanConverter implements Converter<Long> {
 
     @Override
     public CellData convertToExcelData(Long value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         if (ONE.equals(value)) {
             return new CellData(Boolean.TRUE);
         }

@@ -3,7 +3,6 @@ package com.alibaba.excel.analysis.v03;
 import com.alibaba.excel.metadata.CellData;
 
 /**
- *
  * @author Dan Zheng
  */
 public abstract class AbstractXlsRecordHandler implements XlsRecordHandler {

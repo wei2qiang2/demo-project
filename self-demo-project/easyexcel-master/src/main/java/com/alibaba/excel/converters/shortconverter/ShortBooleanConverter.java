@@ -27,7 +27,7 @@ public class ShortBooleanConverter implements Converter<Short> {
 
     @Override
     public Short convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                   GlobalConfiguration globalConfiguration) {
         if (cellData.getBooleanValue()) {
             return ONE;
         }
@@ -36,7 +36,7 @@ public class ShortBooleanConverter implements Converter<Short> {
 
     @Override
     public CellData convertToExcelData(Short value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         if (ONE.equals(value)) {
             return new CellData(Boolean.TRUE);
         }

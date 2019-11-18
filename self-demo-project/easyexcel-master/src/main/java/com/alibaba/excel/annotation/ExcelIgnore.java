@@ -14,4 +14,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
-public @interface ExcelIgnore {}
+public @interface ExcelIgnore {
+}

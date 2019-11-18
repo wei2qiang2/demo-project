@@ -72,7 +72,7 @@ public class DefaultCellHandler implements XlsxCellHandler, XlsxRowResultHolder 
             curCol = PositionUtils.getCol(attributes.getValue(ExcelXmlConstants.POSITION));
 
             // t="s" ,it's means String
-            // t="str" ,it's means String,but does not need to be read in the 'sharedStrings.xml'
+            // t="str" ,it's means String,but does not need to be read in the 'sharedStrings.mappers'
             // t="inlineStr" ,it's means String
             // t="b" ,it's means Boolean
             // t="e" ,it's means Error
@@ -132,7 +132,7 @@ public class DefaultCellHandler implements XlsxCellHandler, XlsxRowResultHolder 
             }
 
             if (CELL_VALUE_TAG.equals(name)) {
-                // Have to go "sharedStrings.xml" and get it
+                // Have to go "sharedStrings.mappers" and get it
                 if (currentCellData.getType() == CellDataTypeEnum.STRING) {
                     String stringValue = analysisContext.readWorkbookHolder().getReadCache()
                         .get(Integer.valueOf(currentCellData.getStringValue()));

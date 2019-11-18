@@ -14,7 +14,7 @@ import com.baomidou.mybatisplus.samples.quickstart.springmvc.entity.User;
 import com.baomidou.mybatisplus.samples.quickstart.springmvc.mapper.UserMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath*:spring.xml"})
+@ContextConfiguration(locations = {"classpath*:spring.mappers"})
 public class SampleTest {
 
     @Autowired

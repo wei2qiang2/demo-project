@@ -27,7 +27,7 @@ public class DefaultWriteHandlerLoader {
         headWriteCellStyle.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
         WriteFont headWriteFont = new WriteFont();
         headWriteFont.setFontName("宋体");
-        headWriteFont.setFontHeightInPoints((short)14);
+        headWriteFont.setFontHeightInPoints((short) 14);
         headWriteFont.setBold(true);
         headWriteCellStyle.setWriteFont(headWriteFont);
         handlerList.add(new HorizontalCellStyleStrategy(headWriteCellStyle, new ArrayList<WriteCellStyle>()));

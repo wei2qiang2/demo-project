@@ -43,7 +43,6 @@ public class ReadWorkbook extends ReadBasicParameter {
     /**
      * This object can be read in the Listener {@link AnalysisEventListener#invoke(Object, AnalysisContext)}
      * {@link AnalysisContext#getCustom()}
-     *
      */
     private Object customObject;
     /**

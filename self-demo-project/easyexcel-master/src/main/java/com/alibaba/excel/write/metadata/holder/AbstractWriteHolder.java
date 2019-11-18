@@ -64,7 +64,7 @@ public abstract class AbstractWriteHolder extends AbstractHolder implements Writ
     private Map<Class<? extends WriteHandler>, List<WriteHandler>> writeHandlerMap;
 
     public AbstractWriteHolder(WriteBasicParameter writeBasicParameter, AbstractWriteHolder parentAbstractWriteHolder,
-        Boolean convertAllFiled) {
+                               Boolean convertAllFiled) {
         super(writeBasicParameter, parentAbstractWriteHolder);
         if (writeBasicParameter.getUse1904windowing() == null) {
             if (parentAbstractWriteHolder == null) {
@@ -145,13 +145,13 @@ public abstract class AbstractWriteHolder extends AbstractHolder implements Writ
         switch (holderType()) {
             case SHEET:
                 compatibleOldCodeCreateRowCellStyleStrategy(writeBasicParameter,
-                    ((WriteSheet)writeBasicParameter).getTableStyle());
+                    ((WriteSheet) writeBasicParameter).getTableStyle());
                 compatibleOldCodeCreateHeadColumnWidthStyleStrategy(writeBasicParameter,
-                    ((WriteSheet)writeBasicParameter).getColumnWidthMap());
+                    ((WriteSheet) writeBasicParameter).getColumnWidthMap());
                 return;
             case TABLE:
                 compatibleOldCodeCreateRowCellStyleStrategy(writeBasicParameter,
-                    ((WriteTable)writeBasicParameter).getTableStyle());
+                    ((WriteTable) writeBasicParameter).getTableStyle());
                 return;
             default:
         }
@@ -159,7 +159,7 @@ public abstract class AbstractWriteHolder extends AbstractHolder implements Writ
 
     @Deprecated
     private void compatibleOldCodeCreateRowCellStyleStrategy(WriteBasicParameter writeBasicParameter,
-        TableStyle tableStyle) {
+                                                             TableStyle tableStyle) {
         if (tableStyle == null) {
             return;
         }
@@ -191,7 +191,7 @@ public abstract class AbstractWriteHolder extends AbstractHolder implements Writ
 
     @Deprecated
     private void compatibleOldCodeCreateHeadColumnWidthStyleStrategy(WriteBasicParameter writeBasicParameter,
-        final Map<Integer, Integer> columnWidthMap) {
+                                                                     final Map<Integer, Integer> columnWidthMap) {
         if (columnWidthMap == null || columnWidthMap.isEmpty()) {
             return;
         }
@@ -278,7 +278,7 @@ public abstract class AbstractWriteHolder extends AbstractHolder implements Writ
         for (WriteHandler handler : handlerList) {
             int order = Integer.MIN_VALUE;
             if (handler instanceof Order) {
-                order = ((Order)handler).order();
+                order = ((Order) handler).order();
             }
             if (orderExcelWriteHandlerMap.containsKey(order)) {
                 orderExcelWriteHandlerMap.get(order).add(handler);
@@ -294,7 +294,7 @@ public abstract class AbstractWriteHolder extends AbstractHolder implements Writ
         for (Map.Entry<Integer, List<WriteHandler>> entry : orderExcelWriteHandlerMap.entrySet()) {
             for (WriteHandler handler : entry.getValue()) {
                 if (handler instanceof NotRepeatExecutor) {
-                    String uniqueValue = ((NotRepeatExecutor)handler).uniqueValue();
+                    String uniqueValue = ((NotRepeatExecutor) handler).uniqueValue();
                     if (alreadyExistedHandlerSet.contains(uniqueValue)) {
                         continue;
                     }

@@ -12,8 +12,7 @@ public interface ExcelAnalyser {
     /**
      * parse one sheet
      *
-     * @param readSheet
-     *            sheet to read
+     * @param readSheet sheet to read
      */
     void analysis(ReadSheet readSheet);
 

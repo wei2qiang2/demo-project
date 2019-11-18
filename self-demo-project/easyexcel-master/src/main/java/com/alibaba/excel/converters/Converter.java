@@ -8,8 +8,8 @@ import com.alibaba.excel.metadata.property.ExcelContentProperty;
 /**
  * Convert between Java objects and excel objects
  *
- * @author Dan Zheng
  * @param <T>
+ * @author Dan Zheng
  */
 public interface Converter<T> {
 
@@ -30,31 +30,23 @@ public interface Converter<T> {
     /**
      * Convert excel objects to Java objects
      *
-     * @param cellData
-     *            Excel cell data.NotNull.
-     * @param contentProperty
-     *            Content property.Nullable.
-     * @param globalConfiguration
-     *            Global configuration.NotNull.
+     * @param cellData            Excel cell data.NotNull.
+     * @param contentProperty     Content property.Nullable.
+     * @param globalConfiguration Global configuration.NotNull.
      * @return Data to put into a Java object
-     * @throws Exception
-     *             Exception.
+     * @throws Exception Exception.
      */
     T convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) throws Exception;
+                        GlobalConfiguration globalConfiguration) throws Exception;
 
     /**
      * Convert Java objects to excel objects
      *
-     * @param value
-     *            Java Data.NotNull.
-     * @param contentProperty
-     *            Content property.Nullable.
-     * @param globalConfiguration
-     *            Global configuration.NotNull.
+     * @param value               Java Data.NotNull.
+     * @param contentProperty     Content property.Nullable.
+     * @param globalConfiguration Global configuration.NotNull.
      * @return Data to put into a Excel
-     * @throws Exception
-     *             Exception.
+     * @throws Exception Exception.
      */
     CellData convertToExcelData(T value, ExcelContentProperty contentProperty, GlobalConfiguration globalConfiguration)
         throws Exception;

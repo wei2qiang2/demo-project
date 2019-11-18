@@ -6,7 +6,6 @@ import java.util.List;
 public class TestList {
 
 
-
     public static void main(String[] args) {
         User a = new User("123", "123");
         User b = new User("111", "111");
@@ -24,15 +23,15 @@ public class TestList {
 
     }
 
-    public static void change(User u){
+    public static void change(User u) {
         String s = "2019-09-27 15:41:19.0";
-        System.out.println(s.substring(0,18));
+        System.out.println(s.substring(0, 18));
     }
 
 
 }
 
-class User{
+class User {
     private String id;
     private String name;
 

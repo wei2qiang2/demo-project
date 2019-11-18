@@ -35,7 +35,7 @@ public class DemoTest {
     @Test
     public void testCreateTable() {
         ProcessEngineConfiguration configuration =
-                ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("activiti.cfg.xml");
+                ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("activiti.cfg.mappers");
 
         ProcessEngine processEngine = configuration.buildProcessEngine();
 

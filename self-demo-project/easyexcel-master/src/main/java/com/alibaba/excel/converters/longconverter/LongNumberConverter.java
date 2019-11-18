@@ -27,13 +27,13 @@ public class LongNumberConverter implements Converter<Long> {
 
     @Override
     public Long convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                  GlobalConfiguration globalConfiguration) {
         return cellData.getNumberValue().longValue();
     }
 
     @Override
     public CellData convertToExcelData(Long value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return new CellData(BigDecimal.valueOf(value));
     }
 

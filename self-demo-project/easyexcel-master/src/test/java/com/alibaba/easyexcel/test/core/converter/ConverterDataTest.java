@@ -18,7 +18,6 @@ import com.alibaba.excel.util.DateUtils;
 import com.alibaba.excel.util.FileUtils;
 
 /**
- *
  * @author Jiaju Zhuang
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -105,10 +104,10 @@ public class ConverterDataTest {
         converterData.setBigDecimal(BigDecimal.ONE);
         converterData.setLongData(1L);
         converterData.setIntegerData(1);
-        converterData.setShortData((short)1);
-        converterData.setByteData((byte)1);
+        converterData.setShortData((short) 1);
+        converterData.setByteData((byte) 1);
         converterData.setDoubleData(1.0);
-        converterData.setFloatData((float)1.0);
+        converterData.setFloatData((float) 1.0);
         converterData.setString("测试");
         converterData.setCellData(new CellData("自定义"));
         list.add(converterData);

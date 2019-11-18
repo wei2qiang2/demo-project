@@ -11,8 +11,7 @@ public interface XlsxCellHandler {
     /**
      * Which tags are supported
      *
-     * @param name
-     *            Tag name
+     * @param name Tag name
      * @return Support parsing or not
      */
     boolean support(String name);
@@ -20,18 +19,15 @@ public interface XlsxCellHandler {
     /**
      * Start handle
      *
-     * @param name
-     *            Tag name
-     * @param attributes
-     *            Tag attributes
+     * @param name       Tag name
+     * @param attributes Tag attributes
      */
     void startHandle(String name, Attributes attributes);
 
     /**
      * End handle
      *
-     * @param name
-     *            Tag name
+     * @param name Tag name
      */
     void endHandle(String name);
 }

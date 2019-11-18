@@ -24,13 +24,13 @@ public class AutoConverter implements Converter {
 
     @Override
     public Object convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                    GlobalConfiguration globalConfiguration) {
         return null;
     }
 
     @Override
     public CellData convertToExcelData(Object value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return null;
     }
 }

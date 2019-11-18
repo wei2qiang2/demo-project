@@ -28,13 +28,13 @@ public class FloatStringConverter implements Converter<Float> {
 
     @Override
     public Float convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) throws ParseException {
+                                   GlobalConfiguration globalConfiguration) throws ParseException {
         return NumberUtils.parseFloat(cellData.getStringValue(), contentProperty);
     }
 
     @Override
     public CellData convertToExcelData(Float value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return NumberUtils.formatToCellData(value, contentProperty);
     }
 }

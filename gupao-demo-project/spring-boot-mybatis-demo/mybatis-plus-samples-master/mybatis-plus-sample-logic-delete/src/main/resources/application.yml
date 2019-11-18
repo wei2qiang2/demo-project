@@ -13,8 +13,8 @@ logging:
   level:
     com.baomidou.mybatisplus.samples: debug
 mybatis-plus:
-  # 扫描 mapper.xml
-  mapper-locations: classpath:/mapper/*Mapper.xml
+  # 扫描 mapper.mappers
+  mapper-locations: classpath:/mapper/*Mapper.mappers
   global-config:
     banner: false
     db-config:

@@ -25,7 +25,7 @@ public class MissingCellDummyRecordHandler extends AbstractXlsRecordHandler {
 
     @Override
     public void processRecord(Record record) {
-        MissingCellDummyRecord mcdr = (MissingCellDummyRecord)record;
+        MissingCellDummyRecord mcdr = (MissingCellDummyRecord) record;
         this.row = mcdr.getRow();
         this.column = mcdr.getColumn();
         this.cellData = new CellData(CellDataTypeEnum.EMPTY);

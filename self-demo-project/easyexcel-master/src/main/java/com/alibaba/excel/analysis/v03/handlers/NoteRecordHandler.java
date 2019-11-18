@@ -20,7 +20,7 @@ public class NoteRecordHandler extends AbstractXlsRecordHandler {
 
     @Override
     public void processRecord(Record record) {
-        NoteRecord nrec = (NoteRecord)record;
+        NoteRecord nrec = (NoteRecord) record;
         this.row = nrec.getRow();
         this.column = nrec.getColumn();
         this.cellData = new CellData(CellDataTypeEnum.EMPTY);

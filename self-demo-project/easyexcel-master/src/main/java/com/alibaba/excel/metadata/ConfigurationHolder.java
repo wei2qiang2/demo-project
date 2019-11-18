@@ -5,7 +5,6 @@ import java.util.Map;
 import com.alibaba.excel.converters.Converter;
 
 /**
- *
  * Get the corresponding holder
  *
  * @author Jiaju Zhuang
@@ -13,7 +12,6 @@ import com.alibaba.excel.converters.Converter;
 public interface ConfigurationHolder extends Holder {
 
     /**
-     *
      * Record whether it's new or from cache
      *
      * @return Record whether it's new or from cache

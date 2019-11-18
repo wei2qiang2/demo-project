@@ -25,7 +25,8 @@ public abstract class AnalysisEventListener<T> implements ReadListener<T> {
      * @param headMap
      * @param context
      */
-    public void invokeHeadMap(Map<Integer, String> headMap, AnalysisContext context) {}
+    public void invokeHeadMap(Map<Integer, String> headMap, AnalysisContext context) {
+    }
 
     /**
      * All listeners receive this method when any one Listener does an error report. If an exception is thrown here, the

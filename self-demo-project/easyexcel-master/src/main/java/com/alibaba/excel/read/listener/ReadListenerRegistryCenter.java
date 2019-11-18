@@ -14,26 +14,22 @@ public interface ReadListenerRegistryCenter {
     /**
      * register
      *
-     * @param listener
-     *            Analysis listener
+     * @param listener Analysis listener
      */
     void register(AnalysisEventListener listener);
 
     /**
      * Parse one row to notify all event listeners
      *
-     * @param event
-     *            parse event
-     * @param analysisContext
-     *            Analysis context
+     * @param event           parse event
+     * @param analysisContext Analysis context
      */
     void notifyEndOneRow(AnalysisFinishEvent event, AnalysisContext analysisContext);
 
     /**
      * Notify after all analysed
      *
-     * @param analysisContext
-     *            Analysis context
+     * @param analysisContext Analysis context
      */
     void notifyAfterAllAnalysed(AnalysisContext analysisContext);
 }

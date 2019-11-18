@@ -27,7 +27,8 @@ import net.sf.cglib.beans.BeanMap;
 public class ModelBuildEventListener extends AbstractIgnoreExceptionReadListener<Map<Integer, CellData>> {
 
     @Override
-    public void invokeHead(Map<Integer, CellData> cellDataMap, AnalysisContext context) {}
+    public void invokeHead(Map<Integer, CellData> cellDataMap, AnalysisContext context) {
+    }
 
     @Override
     public void invoke(Map<Integer, CellData> cellDataMap, AnalysisContext context) {
@@ -40,7 +41,7 @@ public class ModelBuildEventListener extends AbstractIgnoreExceptionReadListener
     }
 
     private Object buildStringList(Map<Integer, CellData> cellDataMap, ReadHolder currentReadHolder,
-        AnalysisContext context) {
+                                   AnalysisContext context) {
         if (context.readWorkbookHolder().getDefaultReturnMap()) {
             Map<Integer, String> map = new HashMap<Integer, String>(cellDataMap.size() * 4 / 3 + 1);
             for (Map.Entry<Integer, CellData> entry : cellDataMap.entrySet()) {
@@ -49,7 +50,7 @@ public class ModelBuildEventListener extends AbstractIgnoreExceptionReadListener
                     map.put(entry.getKey(), null);
                     continue;
                 }
-                map.put(entry.getKey(), (String)ConverterUtils.convertToJavaObject(cellData, String.class, null,
+                map.put(entry.getKey(), (String) ConverterUtils.convertToJavaObject(cellData, String.class, null,
                     currentReadHolder.converterMap(), currentReadHolder.globalConfiguration()));
             }
             return map;
@@ -62,7 +63,7 @@ public class ModelBuildEventListener extends AbstractIgnoreExceptionReadListener
                     list.add(null);
                     continue;
                 }
-                list.add((String)ConverterUtils.convertToJavaObject(cellData, String.class, null,
+                list.add((String) ConverterUtils.convertToJavaObject(cellData, String.class, null,
                     currentReadHolder.converterMap(), currentReadHolder.globalConfiguration()));
             }
             return list;
@@ -102,5 +103,6 @@ public class ModelBuildEventListener extends AbstractIgnoreExceptionReadListener
     }
 
     @Override
-    public void doAfterAllAnalysed(AnalysisContext context) {}
+    public void doAfterAllAnalysed(AnalysisContext context) {
+    }
 }

@@ -28,13 +28,13 @@ public class ShortStringConverter implements Converter<Short> {
 
     @Override
     public Short convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) throws ParseException {
+                                   GlobalConfiguration globalConfiguration) throws ParseException {
         return NumberUtils.parseShort(cellData.getStringValue(), contentProperty);
     }
 
     @Override
     public CellData convertToExcelData(Short value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return NumberUtils.formatToCellData(value, contentProperty);
     }
 }

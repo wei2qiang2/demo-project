@@ -12,8 +12,8 @@ import com.alibaba.excel.metadata.property.ExcelContentProperty;
  * @author Jiaju Zhuang
  */
 public class FloatBooleanConverter implements Converter<Float> {
-    private static final Float ONE = (float)1.0;
-    private static final Float ZERO = (float)0.0;
+    private static final Float ONE = (float) 1.0;
+    private static final Float ZERO = (float) 0.0;
 
     @Override
     public Class supportJavaTypeKey() {
@@ -27,7 +27,7 @@ public class FloatBooleanConverter implements Converter<Float> {
 
     @Override
     public Float convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                   GlobalConfiguration globalConfiguration) {
         if (cellData.getBooleanValue()) {
             return ONE;
         }
@@ -36,7 +36,7 @@ public class FloatBooleanConverter implements Converter<Float> {
 
     @Override
     public CellData convertToExcelData(Float value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         if (ONE.equals(value)) {
             return new CellData(Boolean.TRUE);
         }

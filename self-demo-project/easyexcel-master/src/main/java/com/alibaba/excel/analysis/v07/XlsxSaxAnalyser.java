@@ -36,7 +36,6 @@ import com.alibaba.excel.read.metadata.holder.ReadWorkbookHolder;
 import com.alibaba.excel.util.FileUtils;
 
 /**
- *
  * @author jipengfei
  */
 public class XlsxSaxAnalyser implements ExcelExecutor {
@@ -66,7 +65,7 @@ public class XlsxSaxAnalyser implements ExcelExecutor {
         // Specify default cache
         defaultReadCache(readWorkbookHolder, sharedStringsTablePackagePart);
 
-        // Analysis sharedStringsTable.xml
+        // Analysis sharedStringsTable.mappers
         analysisSharedStringsTable(sharedStringsTablePackagePart.getInputStream(), readWorkbookHolder);
 
         XSSFReader xssfReader = new XSSFReader(pkg);
@@ -75,7 +74,7 @@ public class XlsxSaxAnalyser implements ExcelExecutor {
         stylesTable = xssfReader.getStylesTable();
         sheetList = new ArrayList<ReadSheet>();
         sheetMap = new HashMap<Integer, InputStream>();
-        XSSFReader.SheetIterator ite = (XSSFReader.SheetIterator)xssfReader.getSheetsData();
+        XSSFReader.SheetIterator ite = (XSSFReader.SheetIterator) xssfReader.getSheetsData();
         int index = 0;
         if (!ite.hasNext()) {
             throw new ExcelAnalysisException("Can not find any sheet!");
@@ -129,7 +128,7 @@ public class XlsxSaxAnalyser implements ExcelExecutor {
     }
 
     private void analysisSharedStringsTable(InputStream sharedStringsTableInputStream,
-        ReadWorkbookHolder readWorkbookHolder) throws Exception {
+                                            ReadWorkbookHolder readWorkbookHolder) throws Exception {
         ContentHandler handler = new SharedStringsTableHandler(readWorkbookHolder.getReadCache());
         parseXmlSource(sharedStringsTableInputStream, handler);
         readWorkbookHolder.getReadCache().putFinished();

@@ -7,7 +7,8 @@ package com.alibaba.excel.exception;
  */
 public class ExcelAnalysisStopException extends ExcelAnalysisException {
 
-    public ExcelAnalysisStopException() {}
+    public ExcelAnalysisStopException() {
+    }
 
     public ExcelAnalysisStopException(String message) {
         super(message);

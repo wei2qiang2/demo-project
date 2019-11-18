@@ -27,7 +27,7 @@ public class IntegerBooleanConverter implements Converter<Integer> {
 
     @Override
     public Integer convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                     GlobalConfiguration globalConfiguration) {
         if (cellData.getBooleanValue()) {
             return ONE;
         }
@@ -36,7 +36,7 @@ public class IntegerBooleanConverter implements Converter<Integer> {
 
     @Override
     public CellData convertToExcelData(Integer value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         if (ONE.equals(value)) {
             return new CellData(Boolean.TRUE);
         }

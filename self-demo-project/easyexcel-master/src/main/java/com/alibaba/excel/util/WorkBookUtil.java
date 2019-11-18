@@ -17,12 +17,12 @@ import com.alibaba.excel.support.ExcelTypeEnum;
 import com.alibaba.excel.write.metadata.holder.WriteWorkbookHolder;
 
 /**
- *
  * @author jipengfei
  */
 public class WorkBookUtil {
 
-    private WorkBookUtil() {}
+    private WorkBookUtil() {
+    }
 
     public static Workbook createWorkBook(WriteWorkbookHolder writeWorkbookHolder)
         throws IOException, InvalidFormatException {

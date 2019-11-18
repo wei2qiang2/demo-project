@@ -12,7 +12,6 @@ import com.alibaba.excel.util.StyleUtil;
 import com.alibaba.excel.write.metadata.style.WriteCellStyle;
 
 /**
- *
  * Use the same style for the column
  *
  * @author Jiaju Zhuang
@@ -71,8 +70,7 @@ public abstract class AbstractVerticalCellStyleStrategy extends AbstractCellStyl
     /**
      * Returns the column width corresponding to each column head
      *
-     * @param head
-     *            Nullable
+     * @param head Nullable
      * @return
      */
     protected abstract WriteCellStyle headCellStyle(Head head);
@@ -80,8 +78,7 @@ public abstract class AbstractVerticalCellStyleStrategy extends AbstractCellStyl
     /**
      * Returns the column width corresponding to each column head
      *
-     * @param head
-     *            Nullable
+     * @param head Nullable
      * @return
      */
     protected abstract WriteCellStyle contentCellStyle(Head head);

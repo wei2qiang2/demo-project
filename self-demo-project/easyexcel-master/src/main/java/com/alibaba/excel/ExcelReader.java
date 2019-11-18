@@ -39,31 +39,24 @@ public class ExcelReader {
     /**
      * Create new reader
      *
-     * @param in
-     *            the POI filesystem that contains the Workbook stream
-     * @param excelTypeEnum
-     *            03 or 07
-     * @param customContent
-     *            {@link AnalysisEventListener#invoke(Object, AnalysisContext) }AnalysisContext
-     * @param eventListener
-     *            Callback method after each row is parsed.
+     * @param in            the POI filesystem that contains the Workbook stream
+     * @param excelTypeEnum 03 or 07
+     * @param customContent {@link AnalysisEventListener#invoke(Object, AnalysisContext) }AnalysisContext
+     * @param eventListener Callback method after each row is parsed.
      * @deprecated please use {@link EasyExcelFactory#read()} build 'ExcelReader'
      */
     @Deprecated
     public ExcelReader(InputStream in, ExcelTypeEnum excelTypeEnum, Object customContent,
-        AnalysisEventListener eventListener) {
+                       AnalysisEventListener eventListener) {
         this(in, excelTypeEnum, customContent, eventListener, true);
     }
 
     /**
      * Create new reader
      *
-     * @param in
-     *            the POI filesystem that contains the Workbook stream
-     * @param customContent
-     *            {@link AnalysisEventListener#invoke(Object, AnalysisContext) }AnalysisContext
-     * @param eventListener
-     *            Callback method after each row is parsed
+     * @param in            the POI filesystem that contains the Workbook stream
+     * @param customContent {@link AnalysisEventListener#invoke(Object, AnalysisContext) }AnalysisContext
+     * @param eventListener Callback method after each row is parsed
      * @deprecated please use {@link EasyExcelFactory#read()} build 'ExcelReader'
      */
     @Deprecated
@@ -74,10 +67,8 @@ public class ExcelReader {
     /**
      * Create new reader
      *
-     * @param param
-     *            old param Deprecated
-     * @param eventListener
-     *            Callback method after each row is parsed.
+     * @param param         old param Deprecated
+     * @param eventListener Callback method after each row is parsed.
      * @deprecated please use {@link EasyExcelFactory#read()} build 'ExcelReader'
      */
     @Deprecated
@@ -89,13 +80,11 @@ public class ExcelReader {
      * Create new reader
      *
      * @param in
-     * @param customContent
-     *            {@link AnalysisEventListener#invoke(Object, AnalysisContext) }AnalysisContext
+     * @param customContent {@link AnalysisEventListener#invoke(Object, AnalysisContext) }AnalysisContext
      * @param eventListener
-     * @param trim
-     *            The content of the form is empty and needs to be empty. The purpose is to be fault-tolerant, because
-     *            there are often table contents with spaces that can not be converted into custom types. For example:
-     *            '1234 ' contain a space cannot be converted to int.
+     * @param trim          The content of the form is empty and needs to be empty. The purpose is to be fault-tolerant, because
+     *                      there are often table contents with spaces that can not be converted into custom types. For example:
+     *                      '1234 ' contain a space cannot be converted to int.
      * @deprecated please use {@link EasyExcelFactory#read()} build 'ExcelReader'
      */
     @Deprecated
@@ -106,23 +95,18 @@ public class ExcelReader {
     /**
      * Create new reader
      *
-     * @param in
-     *            the POI filesystem that contains the Workbook stream
-     * @param excelTypeEnum
-     *            03 or 07
-     * @param customContent
-     *            {@link AnalysisEventListener#invoke(Object, AnalysisContext) }AnalysisContext
-     * @param eventListener
-     *            Callback method after each row is parsed.
-     * @param trim
-     *            The content of the form is empty and needs to be empty. The purpose is to be fault-tolerant, because
-     *            there are often table contents with spaces that can not be converted into custom types. For example:
-     *            '1234 ' contain a space cannot be converted to int.
+     * @param in            the POI filesystem that contains the Workbook stream
+     * @param excelTypeEnum 03 or 07
+     * @param customContent {@link AnalysisEventListener#invoke(Object, AnalysisContext) }AnalysisContext
+     * @param eventListener Callback method after each row is parsed.
+     * @param trim          The content of the form is empty and needs to be empty. The purpose is to be fault-tolerant, because
+     *                      there are often table contents with spaces that can not be converted into custom types. For example:
+     *                      '1234 ' contain a space cannot be converted to int.
      * @deprecated please use {@link EasyExcelFactory#read()} build 'ExcelReader'
      */
     @Deprecated
     public ExcelReader(InputStream in, ExcelTypeEnum excelTypeEnum, Object customContent,
-        AnalysisEventListener eventListener, boolean trim) {
+                       AnalysisEventListener eventListener, boolean trim) {
         ReadWorkbook readWorkbook = new ReadWorkbook();
         readWorkbook.setInputStream(in);
         readWorkbook.setExcelType(excelTypeEnum);
@@ -162,8 +146,7 @@ public class ExcelReader {
     /**
      * Parse the specified sheet，SheetNo start from 1
      *
-     * @param readSheet
-     *            Read sheet
+     * @param readSheet Read sheet
      */
     public ExcelReader read(ReadSheet readSheet) {
         checkFinished();
@@ -174,8 +157,7 @@ public class ExcelReader {
     /**
      * Parse the specified sheet，SheetNo start from 1
      *
-     * @param sheet
-     *            Read sheet
+     * @param sheet Read sheet
      * @deprecated please us {@link #read(ReadSheet)}
      */
     @Deprecated
@@ -195,11 +177,8 @@ public class ExcelReader {
     /**
      * Parse the specified sheet
      *
-     * @param sheet
-     *            Read sheet
-     * @param clazz
-     *            object parsed into each row of value
-     *
+     * @param sheet Read sheet
+     * @param clazz object parsed into each row of value
      * @deprecated Set the class in the sheet before read
      */
     @Deprecated
@@ -234,7 +213,6 @@ public class ExcelReader {
      * Parse the workBook get all sheets
      *
      * @return workBook all sheets
-     *
      * @deprecated please use {@link #excelExecutor()}
      */
     @Deprecated
@@ -253,7 +231,6 @@ public class ExcelReader {
     }
 
     /**
-     *
      * @return
      * @deprecated please use {@link #analysisContext()}
      */
@@ -275,7 +252,6 @@ public class ExcelReader {
 
     /**
      * Prevents calls to {@link #finish} from freeing the cache
-     *
      */
     @Override
     protected void finalize() {

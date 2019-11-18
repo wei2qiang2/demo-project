@@ -18,7 +18,8 @@ public abstract class AbstractIgnoreExceptionReadListener<T> implements ReadList
      * @param context
      */
     @Override
-    public void onException(Exception exception, AnalysisContext context) {}
+    public void onException(Exception exception, AnalysisContext context) {
+    }
 
     @Override
     public boolean hasNext(AnalysisContext context) {

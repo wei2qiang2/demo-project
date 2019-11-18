@@ -123,7 +123,7 @@ public class ExcelBuilderImpl implements ExcelBuilder {
         Row row = WorkBookUtil.createRow(context.writeSheetHolder().getSheet(), n);
         afterRowCreate(row, relativeRowIndex);
         if (oneRowData instanceof List) {
-            addBasicTypeToExcel((List)oneRowData, row, relativeRowIndex);
+            addBasicTypeToExcel((List) oneRowData, row, relativeRowIndex);
         } else {
             addJavaObjectToExcel(oneRowData, row, relativeRowIndex, fieldList);
         }
@@ -136,7 +136,7 @@ public class ExcelBuilderImpl implements ExcelBuilder {
         }
         for (WriteHandler writeHandler : handlerList) {
             if (writeHandler instanceof RowWriteHandler) {
-                ((RowWriteHandler)writeHandler).beforeRowCreate(context.writeSheetHolder(), context.writeTableHolder(),
+                ((RowWriteHandler) writeHandler).beforeRowCreate(context.writeSheetHolder(), context.writeTableHolder(),
                     rowIndex, relativeRowIndex, false);
             }
         }
@@ -149,7 +149,7 @@ public class ExcelBuilderImpl implements ExcelBuilder {
         }
         for (WriteHandler writeHandler : handlerList) {
             if (writeHandler instanceof RowWriteHandler) {
-                ((RowWriteHandler)writeHandler).afterRowCreate(context.writeSheetHolder(), context.writeTableHolder(),
+                ((RowWriteHandler) writeHandler).afterRowCreate(context.writeSheetHolder(), context.writeTableHolder(),
                     row, relativeRowIndex, false);
             }
         }
@@ -187,7 +187,7 @@ public class ExcelBuilderImpl implements ExcelBuilder {
     }
 
     private void doAddBasicTypeToExcel(List<Object> oneRowData, Head head, Row row, int relativeRowIndex, int dataIndex,
-        int cellIndex) {
+                                       int cellIndex) {
         beforeCellCreate(row, head, relativeRowIndex);
         Cell cell = WorkBookUtil.createCell(row, cellIndex);
         Object value = oneRowData.get(dataIndex);
@@ -270,7 +270,7 @@ public class ExcelBuilderImpl implements ExcelBuilder {
         }
         for (WriteHandler writeHandler : handlerList) {
             if (writeHandler instanceof CellWriteHandler) {
-                ((CellWriteHandler)writeHandler).beforeCellCreate(context.writeSheetHolder(),
+                ((CellWriteHandler) writeHandler).beforeCellCreate(context.writeSheetHolder(),
                     context.writeTableHolder(), row, head, relativeRowIndex, false);
             }
         }
@@ -284,7 +284,7 @@ public class ExcelBuilderImpl implements ExcelBuilder {
         }
         for (WriteHandler writeHandler : handlerList) {
             if (writeHandler instanceof CellWriteHandler) {
-                ((CellWriteHandler)writeHandler).afterCellCreate(context.writeSheetHolder(), context.writeTableHolder(),
+                ((CellWriteHandler) writeHandler).afterCellCreate(context.writeSheetHolder(), context.writeTableHolder(),
                     cellData, cell, head, relativeRowIndex, false);
             }
         }
@@ -294,12 +294,12 @@ public class ExcelBuilderImpl implements ExcelBuilder {
     }
 
     private CellData converterAndSet(WriteHolder currentWriteHolder, Class clazz, Cell cell, Object value,
-        ExcelContentProperty excelContentProperty) {
+                                     ExcelContentProperty excelContentProperty) {
         if (value == null) {
             return null;
         }
         if (value instanceof String && currentWriteHolder.globalConfiguration().getAutoTrim()) {
-            value = ((String)value).trim();
+            value = ((String) value).trim();
         }
         CellData cellData = convert(currentWriteHolder, clazz, cell, value, excelContentProperty);
         if (cellData == null || cellData.getType() == null) {
@@ -350,9 +350,9 @@ public class ExcelBuilderImpl implements ExcelBuilder {
     }
 
     private CellData convert(WriteHolder currentWriteHolder, Class clazz, Cell cell, Object value,
-        ExcelContentProperty excelContentProperty) {
+                             ExcelContentProperty excelContentProperty) {
         if (value instanceof CellData) {
-            return (CellData)value;
+            return (CellData) value;
         }
         Converter converter = null;
         if (excelContentProperty != null) {

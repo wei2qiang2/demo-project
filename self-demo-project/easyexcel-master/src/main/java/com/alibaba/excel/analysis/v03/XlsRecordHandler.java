@@ -13,8 +13,7 @@ public interface XlsRecordHandler extends Comparable<XlsRecordHandler> {
     /**
      * Which tags are supported
      *
-     * @param record
-     *            Excel analysis record
+     * @param record Excel analysis record
      * @return Which tags are supported
      */
     boolean support(Record record);

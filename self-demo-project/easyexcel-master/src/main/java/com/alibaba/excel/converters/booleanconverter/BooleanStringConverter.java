@@ -25,13 +25,13 @@ public class BooleanStringConverter implements Converter<Boolean> {
 
     @Override
     public Boolean convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                     GlobalConfiguration globalConfiguration) {
         return Boolean.valueOf(cellData.getStringValue());
     }
 
     @Override
     public CellData convertToExcelData(Boolean value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return new CellData(value.toString());
     }
 

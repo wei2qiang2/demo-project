@@ -19,7 +19,8 @@ import com.alibaba.excel.read.metadata.holder.ReadHolder;
  **/
 public class ConverterUtils {
 
-    private ConverterUtils() {}
+    private ConverterUtils() {
+    }
 
     /**
      * Convert it into a String map
@@ -44,7 +45,7 @@ public class ConverterUtils {
             }
             try {
                 stringMap.put(entry.getKey(),
-                    (String)(converter.convertToJavaData(cellData, null, readHolder.globalConfiguration())));
+                    (String) (converter.convertToJavaData(cellData, null, readHolder.globalConfiguration())));
             } catch (Exception e) {
                 throw new ExcelDataConvertException("Convert data " + cellData + " to String error ", e);
             }
@@ -63,7 +64,7 @@ public class ConverterUtils {
      * @return
      */
     public static Object convertToJavaObject(CellData cellData, Class clazz, ExcelContentProperty contentProperty,
-        Map<String, Converter> converterMap, GlobalConfiguration globalConfiguration) {
+                                             Map<String, Converter> converterMap, GlobalConfiguration globalConfiguration) {
         if (clazz == CellData.class) {
             return new CellData(cellData);
         }

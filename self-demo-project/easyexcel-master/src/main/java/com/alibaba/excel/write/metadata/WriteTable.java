@@ -14,7 +14,6 @@ public class WriteTable extends WriteBasicParameter {
      */
     private Integer tableNo;
     /**
-     *
      * @deprecated please use{@link HorizontalCellStyleStrategy}
      */
     @Deprecated

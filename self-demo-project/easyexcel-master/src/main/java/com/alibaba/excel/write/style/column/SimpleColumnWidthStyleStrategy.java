@@ -11,7 +11,6 @@ public class SimpleColumnWidthStyleStrategy extends AbstractHeadColumnWidthStyle
     private Integer columnWidth;
 
     /**
-     *
      * @param columnWidth
      */
     public SimpleColumnWidthStyleStrategy(Integer columnWidth) {

@@ -7,7 +7,8 @@ package com.alibaba.excel.util;
  */
 public class StringUtils {
 
-    private StringUtils() {}
+    private StringUtils() {
+    }
 
     public static boolean isEmpty(Object str) {
         return (str == null || "".equals(str));

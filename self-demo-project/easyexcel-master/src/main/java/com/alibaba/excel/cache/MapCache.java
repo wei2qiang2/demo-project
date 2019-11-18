@@ -6,7 +6,6 @@ import java.util.Map;
 import com.alibaba.excel.context.AnalysisContext;
 
 /**
- *
  * Putting temporary data directly into a map is a little more efficient but very memory intensive
  *
  * @author Jiaju Zhuang
@@ -16,7 +15,8 @@ public class MapCache implements ReadCache {
     private int index = 0;
 
     @Override
-    public void init(AnalysisContext analysisContext) {}
+    public void init(AnalysisContext analysisContext) {
+    }
 
     @Override
     public void put(String value) {
@@ -32,9 +32,11 @@ public class MapCache implements ReadCache {
     }
 
     @Override
-    public void putFinished() {}
+    public void putFinished() {
+    }
 
     @Override
-    public void destroy() {}
+    public void destroy() {
+    }
 
 }

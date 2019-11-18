@@ -37,11 +37,11 @@ public class ExcelWriteHeadProperty extends ExcelHeadProperty {
             return;
         }
         this.headRowHeightProperty =
-            RowHeightProperty.build((HeadRowHeight)headClazz.getAnnotation(HeadRowHeight.class));
+            RowHeightProperty.build((HeadRowHeight) headClazz.getAnnotation(HeadRowHeight.class));
         this.contentRowHeightProperty =
-            RowHeightProperty.build((ContentRowHeight)headClazz.getAnnotation(ContentRowHeight.class));
+            RowHeightProperty.build((ContentRowHeight) headClazz.getAnnotation(ContentRowHeight.class));
 
-        ColumnWidth parentColumnWidth = (ColumnWidth)headClazz.getAnnotation(ColumnWidth.class);
+        ColumnWidth parentColumnWidth = (ColumnWidth) headClazz.getAnnotation(ColumnWidth.class);
         for (Map.Entry<Integer, ExcelContentProperty> entry : getContentPropertyMap().entrySet()) {
             Integer index = entry.getKey();
             ExcelContentProperty excelContentPropertyData = entry.getValue();

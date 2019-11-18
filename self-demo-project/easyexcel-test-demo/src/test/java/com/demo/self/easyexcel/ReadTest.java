@@ -7,7 +7,7 @@ public class ReadTest {
 
 
     @Test
-    public void simpRead(){
+    public void simpRead() {
 
     }
 }

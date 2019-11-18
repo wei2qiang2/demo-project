@@ -5,15 +5,15 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *
  * @author jipengfei
  * @deprecated pleas use {@link com.alibaba.excel.write.metadata.WriteSheet} or
- *             {@link com.alibaba.excel.read.metadata.ReadSheet}
+ * {@link com.alibaba.excel.read.metadata.ReadSheet}
  */
 @Deprecated
 public class Sheet {
 
     /**
+     *
      */
     private int headLineMun;
 
@@ -23,14 +23,17 @@ public class Sheet {
     private int sheetNo;
 
     /**
+     *
      */
     private String sheetName;
 
     /**
+     *
      */
     private Class<? extends BaseRowModel> clazz;
 
     /**
+     *
      */
     private List<List<String>> head;
 
@@ -70,7 +73,7 @@ public class Sheet {
     }
 
     public Sheet(int sheetNo, int headLineMun, Class<? extends BaseRowModel> clazz, String sheetName,
-        List<List<String>> head) {
+                 List<List<String>> head) {
         this.sheetNo = sheetNo;
         this.clazz = clazz;
         this.headLineMun = headLineMun;

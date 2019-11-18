@@ -66,7 +66,6 @@ public class Ehcache implements ReadCache {
     private int getCount = 0;
     /**
      * Count active cache
-     *
      */
     private LinkedList<Integer> countList = new LinkedList<Integer>();
 

@@ -30,7 +30,7 @@ public class DateNumberConverter implements Converter<Date> {
 
     @Override
     public Date convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                  GlobalConfiguration globalConfiguration) {
         if (contentProperty == null || contentProperty.getDateTimeFormatProperty() == null) {
             return DateUtil.getJavaDate(cellData.getNumberValue().doubleValue(),
                 globalConfiguration.getUse1904windowing(), null);
@@ -42,7 +42,7 @@ public class DateNumberConverter implements Converter<Date> {
 
     @Override
     public CellData convertToExcelData(Date value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         if (contentProperty == null || contentProperty.getDateTimeFormatProperty() == null) {
             return new CellData(
                 BigDecimal.valueOf(DateUtil.getExcelDate(value, globalConfiguration.getUse1904windowing())));

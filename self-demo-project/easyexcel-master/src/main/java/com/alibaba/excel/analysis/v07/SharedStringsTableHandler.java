@@ -6,7 +6,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import com.alibaba.excel.cache.ReadCache;
 
 /**
- * Sax read sharedStringsTable.xml
+ * Sax read sharedStringsTable.mappers
  *
  * @author Jiaju Zhuang
  */

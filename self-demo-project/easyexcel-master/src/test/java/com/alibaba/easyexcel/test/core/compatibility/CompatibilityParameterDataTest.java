@@ -18,7 +18,6 @@ import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.metadata.Sheet;
 
 /**
- *
  * @author Jiaju Zhuang
  */
 public class CompatibilityParameterDataTest {

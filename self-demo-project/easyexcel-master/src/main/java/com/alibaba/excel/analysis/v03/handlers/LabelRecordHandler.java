@@ -19,7 +19,7 @@ public class LabelRecordHandler extends AbstractXlsRecordHandler {
 
     @Override
     public void processRecord(Record record) {
-        LabelRecord lrec = (LabelRecord)record;
+        LabelRecord lrec = (LabelRecord) record;
         this.row = lrec.getRow();
         this.column = lrec.getColumn();
         this.cellData = new CellData(lrec.getValue());

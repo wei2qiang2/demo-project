@@ -189,7 +189,7 @@ public class ReadTest {
         // 这里 需要指定读用哪个class去读，然后读取第一个sheet 同步读取会自动finish
         List<Object> list = EasyExcel.read(fileName).head(DemoData.class).sheet().doReadSync();
         for (Object obj : list) {
-            DemoData data = (DemoData)obj;
+            DemoData data = (DemoData) obj;
             LOGGER.info("读取到数据:{}", JSON.toJSONString(data));
         }
 
@@ -197,7 +197,7 @@ public class ReadTest {
         list = EasyExcel.read(fileName).sheet().doReadSync();
         for (Object obj : list) {
             // 返回每条数据的键值对 表示所在的列 和所在列的值
-            Map<Integer, String> data = (Map<Integer, String>)obj;
+            Map<Integer, String> data = (Map<Integer, String>) obj;
             LOGGER.info("读取到数据:{}", JSON.toJSONString(data));
         }
     }

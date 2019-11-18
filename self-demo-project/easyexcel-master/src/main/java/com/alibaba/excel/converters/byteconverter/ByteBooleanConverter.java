@@ -12,8 +12,8 @@ import com.alibaba.excel.metadata.property.ExcelContentProperty;
  * @author Jiaju Zhuang
  */
 public class ByteBooleanConverter implements Converter<Byte> {
-    private static final Byte ONE = (byte)1;
-    private static final Byte ZERO = (byte)0;
+    private static final Byte ONE = (byte) 1;
+    private static final Byte ZERO = (byte) 0;
 
     @Override
     public Class supportJavaTypeKey() {
@@ -27,7 +27,7 @@ public class ByteBooleanConverter implements Converter<Byte> {
 
     @Override
     public Byte convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                  GlobalConfiguration globalConfiguration) {
         if (cellData.getBooleanValue()) {
             return ONE;
         }
@@ -36,7 +36,7 @@ public class ByteBooleanConverter implements Converter<Byte> {
 
     @Override
     public CellData convertToExcelData(Byte value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         if (ONE.equals(value)) {
             return new CellData(Boolean.TRUE);
         }

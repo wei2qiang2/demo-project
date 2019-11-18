@@ -16,7 +16,7 @@ public enum CellDataTypeEnum {
      */
     STRING,
     /**
-     * This type of data does not need to be read in the 'sharedStrings.xml', it is only used for overuse, and the data
+     * This type of data does not need to be read in the 'sharedStrings.mappers', it is only used for overuse, and the data
      * will be stored as a {@link #STRING}
      */
     DIRECT_STRING,
@@ -42,6 +42,7 @@ public enum CellDataTypeEnum {
     IMAGE;
 
     private static final Map<String, CellDataTypeEnum> TYPE_ROUTING_MAP = new HashMap<String, CellDataTypeEnum>(16);
+
     static {
         TYPE_ROUTING_MAP.put("s", STRING);
         TYPE_ROUTING_MAP.put("str", DIRECT_STRING);

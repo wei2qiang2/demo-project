@@ -32,7 +32,7 @@ public class DeluxeTest {
 
     @Test
     public void testPage() {
-        System.out.println("------ 自定义 xml 分页 ------");
+        System.out.println("------ 自定义 mappers 分页 ------");
         UserPage selectPage = new UserPage(1, 5).setSelectInt(20);
         UserPage userPage = mapper.selectUserPage(selectPage);
         Assert.assertSame(userPage, selectPage);

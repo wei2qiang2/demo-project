@@ -39,7 +39,7 @@ public abstract class AbstractCellStyleStrategy implements CellWriteHandler, She
 
     @Override
     public void beforeCellCreate(WriteSheetHolder writeSheetHolder, WriteTableHolder writeTableHolder, Row row,
-        Head head, int relativeRowIndex, boolean isHead) {
+                                 Head head, int relativeRowIndex, boolean isHead) {
         if (!hasInitialized) {
             initCellStyle(writeSheetHolder.getParentWriteWorkbookHolder().getWorkbook());
             hasInitialized = true;
@@ -48,7 +48,7 @@ public abstract class AbstractCellStyleStrategy implements CellWriteHandler, She
 
     @Override
     public void afterCellCreate(WriteSheetHolder writeSheetHolder, WriteTableHolder writeTableHolder, CellData cellData,
-        Cell cell, Head head, int relativeRowIndex, boolean isHead) {
+                                Cell cell, Head head, int relativeRowIndex, boolean isHead) {
         if (isHead) {
             setHeadCellStyle(cell, head, relativeRowIndex);
         } else {

@@ -20,7 +20,7 @@ public class RkRecordHandler extends AbstractXlsRecordHandler {
 
     @Override
     public void processRecord(Record record) {
-        RKRecord rkrec = (RKRecord)record;
+        RKRecord rkrec = (RKRecord) record;
 
         this.row = rkrec.getRow();
         this.row = rkrec.getColumn();

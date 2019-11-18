@@ -24,9 +24,9 @@ public class SstRecordHandler extends AbstractXlsRecordHandler {
     @Override
     public void processRecord(Record record) {
         if (record.getSid() == SSTRecord.sid) {
-            sstRecord = (SSTRecord)record;
+            sstRecord = (SSTRecord) record;
         } else if (record.getSid() == LabelSSTRecord.sid) {
-            LabelSSTRecord lsrec = (LabelSSTRecord)record;
+            LabelSSTRecord lsrec = (LabelSSTRecord) record;
             this.row = lsrec.getRow();
             this.column = lsrec.getColumn();
             if (sstRecord == null) {

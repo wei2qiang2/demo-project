@@ -5,7 +5,8 @@ package com.alibaba.excel.util;
  */
 public class PositionUtils {
 
-    private PositionUtils() {}
+    private PositionUtils() {
+    }
 
     public static int getRowByRowTagt(String rowTagt) {
         int row = 0;

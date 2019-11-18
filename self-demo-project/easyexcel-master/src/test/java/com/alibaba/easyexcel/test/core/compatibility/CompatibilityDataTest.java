@@ -27,7 +27,6 @@ import com.alibaba.excel.parameter.AnalysisParam;
 import com.alibaba.excel.parameter.GenerateParam;
 
 /**
- *
  * @author Jiaju Zhuang
  */
 public class CompatibilityDataTest {
@@ -93,7 +92,7 @@ public class CompatibilityDataTest {
         InputStream inputStream = new FileInputStream(file);
         List<Object> data = EasyExcel.read(inputStream, new Sheet(1, 1));
         Assert.assertEquals(data.size(), 1);
-        List<String> dataList = (List<String>)data.get(0);
+        List<String> dataList = (List<String>) data.get(0);
         Assert.assertEquals(dataList.get(0), "字符串00");
         inputStream.close();
 
@@ -144,14 +143,14 @@ public class CompatibilityDataTest {
         TableStyle tableStyle = new TableStyle();
         Font headFont = new Font();
         headFont.setBold(true);
-        headFont.setFontHeightInPoints((short)22);
+        headFont.setFontHeightInPoints((short) 22);
         headFont.setFontName("楷体");
         tableStyle.setTableHeadFont(headFont);
         tableStyle.setTableHeadBackGroundColor(IndexedColors.BLUE);
 
         Font contentFont = new Font();
         contentFont.setBold(true);
-        contentFont.setFontHeightInPoints((short)22);
+        contentFont.setFontHeightInPoints((short) 22);
         contentFont.setFontName("黑体");
         tableStyle.setTableContentFont(contentFont);
         tableStyle.setTableContentBackGroundColor(IndexedColors.GREEN);

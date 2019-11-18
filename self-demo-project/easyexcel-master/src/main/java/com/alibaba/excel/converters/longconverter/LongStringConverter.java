@@ -28,13 +28,13 @@ public class LongStringConverter implements Converter<Long> {
 
     @Override
     public Long convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) throws ParseException {
+                                  GlobalConfiguration globalConfiguration) throws ParseException {
         return NumberUtils.parseLong(cellData.getStringValue(), contentProperty);
     }
 
     @Override
     public CellData convertToExcelData(Long value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return NumberUtils.formatToCellData(value, contentProperty);
     }
 }

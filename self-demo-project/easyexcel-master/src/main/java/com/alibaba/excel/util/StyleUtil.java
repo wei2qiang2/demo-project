@@ -17,7 +17,8 @@ import com.alibaba.excel.write.metadata.style.WriteFont;
  */
 public class StyleUtil {
 
-    private StyleUtil() {}
+    private StyleUtil() {
+    }
 
     /**
      * @param workbook
@@ -71,7 +72,7 @@ public class StyleUtil {
     }
 
     private static void buildCellStyle(Workbook workbook, CellStyle cellStyle, WriteCellStyle writeCellStyle,
-        boolean isHead) {
+                                       boolean isHead) {
         buildFont(workbook, cellStyle, writeCellStyle.getWriteFont(), isHead);
         if (writeCellStyle.getDataFormat() != null) {
             cellStyle.setDataFormat(writeCellStyle.getDataFormat());
@@ -143,7 +144,7 @@ public class StyleUtil {
         if (isHead) {
             font = workbook.createFont();
             font.setFontName("宋体");
-            font.setFontHeightInPoints((short)14);
+            font.setFontHeightInPoints((short) 14);
             font.setBold(true);
             cellStyle.setFont(font);
         }

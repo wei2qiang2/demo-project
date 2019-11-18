@@ -9,18 +9,22 @@ import java.util.List;
 @Deprecated
 public class Table {
     /**
+     *
      */
     private Class<? extends BaseRowModel> clazz;
 
     /**
+     *
      */
     private List<List<String>> head;
 
     /**
+     *
      */
     private int tableNo;
 
     /**
+     *
      */
     private TableStyle tableStyle;
 

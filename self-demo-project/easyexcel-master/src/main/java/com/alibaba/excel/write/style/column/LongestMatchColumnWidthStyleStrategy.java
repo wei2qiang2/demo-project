@@ -25,7 +25,7 @@ public class LongestMatchColumnWidthStyleStrategy extends AbstractColumnWidthSty
 
     @Override
     protected void setColumnWidth(WriteSheetHolder writeSheetHolder, CellData cellData, Cell cell, Head head,
-        int relativeRowIndex, boolean isHead) {
+                                  int relativeRowIndex, boolean isHead) {
         if (!isHead && cellData == null) {
             return;
         }

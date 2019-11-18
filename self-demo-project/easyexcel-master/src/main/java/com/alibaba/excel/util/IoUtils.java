@@ -17,7 +17,8 @@ public class IoUtils {
      */
     private static final int DEFAULT_BUFFER_SIZE = 1024 * 4;
 
-    private IoUtils() {}
+    private IoUtils() {
+    }
 
     /**
      * Gets the contents of an InputStream as a byte[].
@@ -82,6 +83,6 @@ public class IoUtils {
         if (count > Integer.MAX_VALUE) {
             return -1;
         }
-        return (int)count;
+        return (int) count;
     }
 }

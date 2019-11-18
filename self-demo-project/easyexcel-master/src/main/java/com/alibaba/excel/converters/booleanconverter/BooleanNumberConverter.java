@@ -26,7 +26,7 @@ public class BooleanNumberConverter implements Converter<Boolean> {
 
     @Override
     public Boolean convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                     GlobalConfiguration globalConfiguration) {
         if (BigDecimal.ONE.compareTo(cellData.getNumberValue()) == 0) {
             return Boolean.TRUE;
         }
@@ -35,7 +35,7 @@ public class BooleanNumberConverter implements Converter<Boolean> {
 
     @Override
     public CellData convertToExcelData(Boolean value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         if (value) {
             return new CellData(BigDecimal.ONE);
         }

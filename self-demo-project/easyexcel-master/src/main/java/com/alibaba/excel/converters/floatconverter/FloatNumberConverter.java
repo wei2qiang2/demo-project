@@ -27,13 +27,13 @@ public class FloatNumberConverter implements Converter<Float> {
 
     @Override
     public Float convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                   GlobalConfiguration globalConfiguration) {
         return cellData.getNumberValue().floatValue();
     }
 
     @Override
     public CellData convertToExcelData(Float value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return new CellData(BigDecimal.valueOf(value));
     }
 

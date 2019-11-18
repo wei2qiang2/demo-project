@@ -10,7 +10,6 @@ import org.xml.sax.helpers.DefaultHandler;
 import com.alibaba.excel.context.AnalysisContext;
 
 /**
- *
  * @author jipengfei
  */
 public class XlsxRowHandler extends DefaultHandler {
@@ -22,7 +21,7 @@ public class XlsxRowHandler extends DefaultHandler {
         this.cellHandlers = XlsxHandlerFactory.buildCellHandlers(analysisContext, stylesTable);
         for (XlsxCellHandler cellHandler : cellHandlers) {
             if (cellHandler instanceof XlsxRowResultHolder) {
-                this.rowResultHolder = (XlsxRowResultHolder)cellHandler;
+                this.rowResultHolder = (XlsxRowResultHolder) cellHandler;
                 break;
             }
         }

@@ -37,7 +37,7 @@ public class Head {
     private ColumnWidthProperty columnWidthProperty;
 
     public Head(Integer columnIndex, String fieldName, List<String> headNameList, Boolean forceIndex,
-        Boolean forceName) {
+                Boolean forceName) {
         this.columnIndex = columnIndex;
         this.fieldName = fieldName;
         if (headNameList == null) {

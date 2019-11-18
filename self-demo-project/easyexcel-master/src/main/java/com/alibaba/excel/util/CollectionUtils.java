@@ -10,7 +10,8 @@ import java.util.Map;
  */
 public class CollectionUtils {
 
-    private CollectionUtils() {}
+    private CollectionUtils() {
+    }
 
     public static boolean isEmpty(Collection<?> collection) {
         return (collection == null || collection.isEmpty());

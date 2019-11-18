@@ -21,13 +21,13 @@ public abstract class AbstractRowHeightStyleStrategy implements RowWriteHandler,
 
     @Override
     public void beforeRowCreate(WriteSheetHolder writeSheetHolder, WriteTableHolder writeTableHolder, int rowIndex,
-        int relativeRowIndex, boolean isHead) {
+                                int relativeRowIndex, boolean isHead) {
 
     }
 
     @Override
     public void afterRowCreate(WriteSheetHolder writeSheetHolder, WriteTableHolder writeTableHolder, Row row,
-        int relativeRowIndex, boolean isHead) {
+                               int relativeRowIndex, boolean isHead) {
         if (isHead) {
             setHeadColumnHeight(row, relativeRowIndex);
         } else {

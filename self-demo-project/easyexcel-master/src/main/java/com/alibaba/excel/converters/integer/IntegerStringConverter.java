@@ -28,13 +28,13 @@ public class IntegerStringConverter implements Converter<Integer> {
 
     @Override
     public Integer convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) throws ParseException {
+                                     GlobalConfiguration globalConfiguration) throws ParseException {
         return NumberUtils.parseInteger(cellData.getStringValue(), contentProperty);
     }
 
     @Override
     public CellData convertToExcelData(Integer value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return NumberUtils.formatToCellData(value, contentProperty);
     }
 }

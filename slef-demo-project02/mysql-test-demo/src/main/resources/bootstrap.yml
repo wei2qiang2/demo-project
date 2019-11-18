@@ -1,0 +1,83 @@
+#server:
+#  port: 8080
+#  context-path: /wq-utils
+#management:
+#  context-path: /wq-utils
+#
+#spring:
+#  profiles:
+#    active: dev
+#  application:
+#    name: wq-utils
+#  session:
+#    store-type: none
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.jdbc.Driver
+#    jdbc-url: jdbc:mysql://localhost:3306/wq-utils?useUnicode=true&useSSL=false&characterEncoding=UTF-8
+#    username: root
+#    password: root
+#    validationQuery: SELECT 1
+#    poolPreparedStatements: true
+#    maxPoolPreparedStatementPerConnectionSize: 20
+#    filters: stat,wall,log4j
+#    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+#    useGlobalDataSourceStat: true
+#
+#
+#
+#mybatis-plus:
+#  mapper-locations: classpath:/mappers/*Mapper.xml
+#  typeAliasesPackage: com.demo.mysql.entity
+#  global-config:
+#    #实体扫描，多个package用逗号或者分号分隔
+#    id-type: 2
+#    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+#    field-strategy: 2
+#    #驼峰下划线转换
+#    db-column-underline: false
+#    #刷新mapper 调试神器
+#    refresh-mapper: true
+#    #数据库大写下划线转换
+#    capital-mode: false
+#    #多租户配置开启
+#    sql-parser-cache: true
+#    #序列接口实现类配置
+#    #key-generator: com.aecc.busys.xamh.xxx
+#    #逻辑删除配置
+#    logic-delete-value: 1
+#    logic-not-delete-value: 0
+#    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+#    #自定义填充策略接口实现
+#    meta-object-handler: com.aecc.yygl.server.config.MyMetaObjectHandler
+#    #自定义SQL注入器
+#    #sql-injector: com.aecc.busys.xamh.xxx
+#  configuration:
+#    map-underscore-to-camel-case: false
+#    cache-enabled: false
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#
+#
+#
+##logging
+#logging:
+#  level:
+#    root: info
+##    com.baomidou.mybatisplus.samples.pagination: debug
+#
+#
+##AES加密公钥
+#AESPublicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCOETOP1WRGC+H8H3BzMF8b8EcVtzLjLjQdWh9qCUMV5P++HMP7e4uLZ8QjZb+l575qIiFI9HQLmu6/2LmXlWXoj/QM7jDzk5/oFVdP67NNe8IaOOPrDfwhf+0+xb+nrudzT/HPdkEisobpCBrsu8PZCsooHkCQo+OXySLEtC4C5wIDAQAB
+#
+##RSA加密公钥和私钥
+#RSA:
+#  PublicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCfJb0dFIEe6ly02/ViHCNuKZIzza3/HOU/NDPb3at/wbMmcNyUSx7FvkOuOwylU+ppC9q7hpxGLvhoSXAV3+F15ZxNMYYAEDnbqpqj+rExHINO0xB9kRHTTp+/QwPI5quSxxVwBKBrMS76YOioelqtUwOEZQMqTK/m/xDxxhe+SwIDAQAB
+#  PrivateKey: MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJ8lvR0UgR7qXLTb9WIcI24pkjPNrf8c5T80M9vdq3/BsyZw3JRLHsW+Q647DKVT6mkL2ruGnEYu+GhJcBXf4XXlnE0xhgAQOduqmqP6sTEcg07TEH2REdNOn79DA8jmq5LHFXAEoGsxLvpg6Kh6Wq1TA4RlAypMr+b/EPHGF75LAgMBAAECgYAtw850NFdFKqPqJm6T/f96SF4Qo47rk8WgvUREb6RHos3/uejUhB2fQ612xuhGCrGX757A2l7KF+u7IZMn1y+gIJgAgQo+vwOAA/Iz4W0h5cnQiH3MNTtcUvCgrnhD/b2OkyQVCFSIYmRyhpLDsr9qC74SWTS9Deylp7mZ5VlGcQJBAOUW6bNQeesIugSf+z22CfH4vXjNPidxBXFaeJSnM/CjIe/hN08KaiPb4oquBWIYojUSds9Jf5+LykEpYu+ccG0CQQCx1449mCwfPScW4nSG9UtCZff8zT/cR/jkyHkyp6O9eepaCLlQox3IY6AtT41r8jbeQl1G86OFsqOYuOOkXmaXAkEAkAOicJ5DtnQq9GNZ/sZkZB/5hGqKCyNqx4KXUOP3q+vxlqofKeojJV3CgWm6apuPxQtRcygCOdsYD3SkBHt01QJABKKFhn1syPOjDSmht9K0v2pA6EnBHFCT4AKJhhRwZAPFY8tOaReXMx3Fkui72tBZNbmtDKhU3qslMFnBNQtwyQJADfCbtvR0zGJJMWO2Du7z++QrqtccIcSbaZ01+hAqD2WpFeuDkM/qtrjxMXb+ybVINSgbW7uYRix8nSCTcVqFhA==
+#
+#
+## 通过url请求携带token链接配置
+#ParaTokenPathList:
+#
+#
+#UpLoad:
+#  path: D:\uploadFile\

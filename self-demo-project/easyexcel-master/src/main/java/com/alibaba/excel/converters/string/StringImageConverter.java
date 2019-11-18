@@ -28,13 +28,13 @@ public class StringImageConverter implements Converter<String> {
 
     @Override
     public String convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                    GlobalConfiguration globalConfiguration) {
         throw new UnsupportedOperationException("Cannot convert images to string");
     }
 
     @Override
     public CellData convertToExcelData(String value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) throws IOException {
+                                       GlobalConfiguration globalConfiguration) throws IOException {
         return new CellData(FileUtils.readFileToByteArray(new File(value)));
     }
 

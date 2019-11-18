@@ -45,7 +45,7 @@ public class FormulaRecordHandler extends AbstractXlsRecordHandler {
     @Override
     public void processRecord(Record record) {
         if (record.getSid() == FormulaRecord.sid) {
-            FormulaRecord frec = (FormulaRecord)record;
+            FormulaRecord frec = (FormulaRecord) record;
 
             this.row = frec.getRow();
             this.column = frec.getColumn();
@@ -92,7 +92,7 @@ public class FormulaRecordHandler extends AbstractXlsRecordHandler {
         } else if (record.getSid() == StringRecord.sid) {
             if (outputNextStringRecord) {
                 // String for formula
-                StringRecord srec = (StringRecord)record;
+                StringRecord srec = (StringRecord) record;
                 this.cellData = tempCellData;
                 this.cellData.setStringValue(srec.getString());
                 this.row = nextRow;

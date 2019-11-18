@@ -60,7 +60,6 @@ public class ReadWorkbookHolder extends AbstractReadHolder {
     /**
      * This object can be read in the Listener {@link AnalysisEventListener#invoke(Object, AnalysisContext)}
      * {@link AnalysisContext#getCustom()}
-     *
      */
     private Object customObject;
     /**

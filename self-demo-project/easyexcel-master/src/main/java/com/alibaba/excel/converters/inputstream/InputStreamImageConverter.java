@@ -28,13 +28,13 @@ public class InputStreamImageConverter implements Converter<InputStream> {
 
     @Override
     public InputStream convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                         GlobalConfiguration globalConfiguration) {
         throw new UnsupportedOperationException("Cannot convert images to input stream");
     }
 
     @Override
     public CellData convertToExcelData(InputStream value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) throws IOException {
+                                       GlobalConfiguration globalConfiguration) throws IOException {
         return new CellData(IoUtils.toByteArray(value));
     }
 

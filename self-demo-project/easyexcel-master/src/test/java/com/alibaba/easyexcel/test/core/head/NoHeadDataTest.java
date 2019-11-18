@@ -11,7 +11,6 @@ import com.alibaba.easyexcel.test.util.TestFileUtil;
 import com.alibaba.excel.EasyExcel;
 
 /**
- *
  * @author Jiaju Zhuang
  */
 public class NoHeadDataTest {

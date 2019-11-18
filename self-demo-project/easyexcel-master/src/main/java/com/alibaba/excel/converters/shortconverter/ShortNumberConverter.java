@@ -27,13 +27,13 @@ public class ShortNumberConverter implements Converter<Short> {
 
     @Override
     public Short convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                   GlobalConfiguration globalConfiguration) {
         return cellData.getNumberValue().shortValue();
     }
 
     @Override
     public CellData convertToExcelData(Short value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return new CellData(BigDecimal.valueOf(value));
     }
 

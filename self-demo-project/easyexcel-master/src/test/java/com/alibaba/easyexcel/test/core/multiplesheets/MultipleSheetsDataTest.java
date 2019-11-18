@@ -15,7 +15,6 @@ import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.read.metadata.ReadSheet;
 
 /**
- *
  * @author Jiaju Zhuang
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -47,7 +46,7 @@ public class MultipleSheetsDataTest {
         int count = 1;
         for (ReadSheet readSheet : sheets) {
             excelReader.read(readSheet);
-            Assert.assertEquals((long)multipleSheetsListener.getList().size(), (long)count);
+            Assert.assertEquals((long) multipleSheetsListener.getList().size(), (long) count);
             count++;
         }
         excelReader.finish();

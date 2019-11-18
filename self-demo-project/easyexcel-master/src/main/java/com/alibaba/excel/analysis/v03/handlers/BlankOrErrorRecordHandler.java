@@ -23,12 +23,12 @@ public class BlankOrErrorRecordHandler extends AbstractXlsRecordHandler {
     @Override
     public void processRecord(Record record) {
         if (record.getSid() == BlankRecord.sid) {
-            BlankRecord br = (BlankRecord)record;
+            BlankRecord br = (BlankRecord) record;
             this.row = br.getRow();
             this.column = br.getColumn();
             this.cellData = new CellData(CellDataTypeEnum.EMPTY);
         } else if (record.getSid() == BoolErrRecord.sid) {
-            BoolErrRecord ber = (BoolErrRecord)record;
+            BoolErrRecord ber = (BoolErrRecord) record;
             this.row = ber.getRow();
             this.column = ber.getColumn();
             this.cellData = new CellData(ber.getBooleanValue());

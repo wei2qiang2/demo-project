@@ -26,7 +26,7 @@ public class ShapeFactor {
     }
 
     public static List<Class> getAllClasses(){
-        List<Class>  calssArr = new ArrayList<>();
+        List<Class>  calssArr = new ArrayList<Class>();
 
         return calssArr;
     }

@@ -28,13 +28,13 @@ public class FileImageConverter implements Converter<File> {
 
     @Override
     public File convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                  GlobalConfiguration globalConfiguration) {
         throw new UnsupportedOperationException("Cannot convert images to file");
     }
 
     @Override
     public CellData convertToExcelData(File value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) throws IOException {
+                                       GlobalConfiguration globalConfiguration) throws IOException {
         return new CellData(FileUtils.readFileToByteArray(value));
     }
 

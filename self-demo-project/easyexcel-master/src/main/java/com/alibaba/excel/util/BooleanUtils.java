@@ -9,7 +9,8 @@ public class BooleanUtils {
 
     private static final String TRUE_NUMBER = "1";
 
-    private BooleanUtils() {}
+    private BooleanUtils() {
+    }
 
     /**
      * String to boolean

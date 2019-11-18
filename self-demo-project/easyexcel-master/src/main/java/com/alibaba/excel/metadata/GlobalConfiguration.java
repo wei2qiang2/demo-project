@@ -12,7 +12,7 @@ public class GlobalConfiguration {
     private Boolean autoTrim;
     /**
      * true if date uses 1904 windowing, or false if using 1900 date windowing.
-     *
+     * <p>
      * default is false
      *
      * @return

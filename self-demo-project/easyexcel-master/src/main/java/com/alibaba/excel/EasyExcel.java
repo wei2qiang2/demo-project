@@ -5,4 +5,5 @@ package com.alibaba.excel;
  *
  * @author jipengfei
  */
-public class EasyExcel extends EasyExcelFactory {}
+public class EasyExcel extends EasyExcelFactory {
+}

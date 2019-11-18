@@ -14,7 +14,6 @@ import com.alibaba.easyexcel.test.util.TestFileUtil;
 import com.alibaba.excel.EasyExcel;
 
 /**
- *
  * @author Jiaju Zhuang
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -65,7 +64,7 @@ public class SimpleDataTest {
         List<Object> list = EasyExcel.read(file).head(SimpleData.class).sheet().doReadSync();
         Assert.assertEquals(list.size(), 10);
         Assert.assertTrue(list.get(0) instanceof SimpleData);
-        Assert.assertEquals(((SimpleData)list.get(0)).getName(), "姓名0");
+        Assert.assertEquals(((SimpleData) list.get(0)).getName(), "姓名0");
     }
 
     private List<SimpleData> data() {

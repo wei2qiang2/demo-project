@@ -56,7 +56,7 @@ public abstract class AbstractReadHolder extends AbstractHolder implements ReadH
     private List<ReadListener> readListenerList;
 
     public AbstractReadHolder(ReadBasicParameter readBasicParameter, AbstractReadHolder parentAbstractReadHolder,
-        Boolean convertAllFiled) {
+                              Boolean convertAllFiled) {
         super(readBasicParameter, parentAbstractReadHolder);
         if (readBasicParameter.getUse1904windowing() == null && parentAbstractReadHolder != null) {
             getGlobalConfiguration()

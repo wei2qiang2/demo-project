@@ -24,13 +24,13 @@ public class ByteArrayImageConverter implements Converter<byte[]> {
 
     @Override
     public byte[] convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                    GlobalConfiguration globalConfiguration) {
         throw new UnsupportedOperationException("Cannot convert images to byte arrays");
     }
 
     @Override
     public CellData convertToExcelData(byte[] value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return new CellData(value);
     }
 

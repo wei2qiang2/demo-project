@@ -24,13 +24,13 @@ public abstract class AbstractColumnWidthStyleStrategy implements CellWriteHandl
 
     @Override
     public void beforeCellCreate(WriteSheetHolder writeSheetHolder, WriteTableHolder writeTableHolder, Row row,
-        Head head, int relativeRowIndex, boolean isHead) {
+                                 Head head, int relativeRowIndex, boolean isHead) {
 
     }
 
     @Override
     public void afterCellCreate(WriteSheetHolder writeSheetHolder, WriteTableHolder writeTableHolder, CellData cellData,
-        Cell cell, Head head, int relativeRowIndex, boolean isHead) {
+                                Cell cell, Head head, int relativeRowIndex, boolean isHead) {
         setColumnWidth(writeSheetHolder, cellData, cell, head, relativeRowIndex, isHead);
     }
 
@@ -45,6 +45,6 @@ public abstract class AbstractColumnWidthStyleStrategy implements CellWriteHandl
      * @param isHead
      */
     protected abstract void setColumnWidth(WriteSheetHolder writeSheetHolder, CellData cellData, Cell cell, Head head,
-        int relativeRowIndex, boolean isHead);
+                                           int relativeRowIndex, boolean isHead);
 
 }

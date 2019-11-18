@@ -18,7 +18,8 @@ public class DateUtils {
     public static final String DATE_FORMAT_19_FORWARD_SLASH = "yyyy/MM/dd HH:mm:ss";
     private static final String MINUS = "-";
 
-    private DateUtils() {}
+    private DateUtils() {
+    }
 
     /**
      * convert string to date

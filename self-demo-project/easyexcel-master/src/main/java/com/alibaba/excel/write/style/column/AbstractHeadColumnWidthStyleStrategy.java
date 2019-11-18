@@ -14,7 +14,7 @@ import com.alibaba.excel.write.metadata.holder.WriteSheetHolder;
 public abstract class AbstractHeadColumnWidthStyleStrategy extends AbstractColumnWidthStyleStrategy {
     @Override
     protected void setColumnWidth(WriteSheetHolder writeSheetHolder, CellData cellData, Cell cell, Head head,
-        int relativeRowIndex, boolean isHead) {
+                                  int relativeRowIndex, boolean isHead) {
         if (!isHead && relativeRowIndex != 0) {
             return;
         }
@@ -31,8 +31,7 @@ public abstract class AbstractHeadColumnWidthStyleStrategy extends AbstractColum
      * <p>
      * if return null,ignore
      *
-     * @param head
-     *            Nullable
+     * @param head Nullable
      * @return
      */
     protected abstract Integer columnWidth(Head head);

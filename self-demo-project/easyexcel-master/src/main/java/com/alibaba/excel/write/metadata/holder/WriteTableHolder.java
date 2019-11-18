@@ -23,7 +23,7 @@ public class WriteTableHolder extends AbstractWriteHolder {
     private WriteTable writeTable;
 
     public WriteTableHolder(WriteTable writeTable, WriteSheetHolder writeSheetHolder,
-        WriteWorkbookHolder writeWorkbookHolder) {
+                            WriteWorkbookHolder writeWorkbookHolder) {
         super(writeTable, writeSheetHolder, writeWorkbookHolder.getWriteWorkbook().getConvertAllFiled());
         this.parentWriteSheetHolder = writeSheetHolder;
         this.tableNo = writeTable.getTableNo();

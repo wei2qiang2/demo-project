@@ -27,13 +27,13 @@ public class DoubleNumberConverter implements Converter<Double> {
 
     @Override
     public Double convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                    GlobalConfiguration globalConfiguration) {
         return cellData.getNumberValue().doubleValue();
     }
 
     @Override
     public CellData convertToExcelData(Double value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         return new CellData(BigDecimal.valueOf(value));
     }
 

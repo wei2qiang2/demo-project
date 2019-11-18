@@ -27,7 +27,7 @@ public class DoubleBooleanConverter implements Converter<Double> {
 
     @Override
     public Double convertToJavaData(CellData cellData, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                    GlobalConfiguration globalConfiguration) {
         if (cellData.getBooleanValue()) {
             return ONE;
         }
@@ -36,7 +36,7 @@ public class DoubleBooleanConverter implements Converter<Double> {
 
     @Override
     public CellData convertToExcelData(Double value, ExcelContentProperty contentProperty,
-        GlobalConfiguration globalConfiguration) {
+                                       GlobalConfiguration globalConfiguration) {
         if (ONE.equals(value)) {
             return new CellData(Boolean.TRUE);
         }

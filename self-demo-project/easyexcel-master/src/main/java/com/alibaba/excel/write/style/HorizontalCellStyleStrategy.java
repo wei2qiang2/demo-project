@@ -12,7 +12,6 @@ import com.alibaba.excel.util.StyleUtil;
 import com.alibaba.excel.write.metadata.style.WriteCellStyle;
 
 /**
- *
  * Use the same style for the row
  *
  * @author Jiaju Zhuang
@@ -26,7 +25,7 @@ public class HorizontalCellStyleStrategy extends AbstractCellStyleStrategy {
     private List<CellStyle> contentCellStyleList;
 
     public HorizontalCellStyleStrategy(WriteCellStyle headWriteCellStyle,
-        List<WriteCellStyle> contentWriteCellStyleList) {
+                                       List<WriteCellStyle> contentWriteCellStyleList) {
         this.headWriteCellStyle = headWriteCellStyle;
         this.contentWriteCellStyleList = contentWriteCellStyleList;
     }

@@ -44,10 +44,8 @@ public class ExcelWriter {
     /**
      * Create new writer
      *
-     * @param outputStream
-     *            the java OutputStream you wish to write the value to
-     * @param typeEnum
-     *            03 or 07
+     * @param outputStream the java OutputStream you wish to write the value to
+     * @param typeEnum     03 or 07
      * @deprecated please use {@link com.alibaba.excel.write.builder.ExcelWriterBuilder} build ExcelWriter
      */
     @Deprecated
@@ -56,15 +54,11 @@ public class ExcelWriter {
     }
 
     /**
-     *
      * Create new writer
      *
-     * @param outputStream
-     *            the java OutputStream you wish to write the value to
-     * @param typeEnum
-     *            03 or 07
-     * @param needHead
-     *            Do you need to write the header to the file?
+     * @param outputStream the java OutputStream you wish to write the value to
+     * @param typeEnum     03 or 07
+     * @param needHead     Do you need to write the header to the file?
      * @deprecated please use {@link com.alibaba.excel.write.builder.ExcelWriterBuilder} build ExcelWriter
      */
     @Deprecated
@@ -75,38 +69,31 @@ public class ExcelWriter {
     /**
      * Create new writer
      *
-     * @param templateInputStream
-     *            Append value after a POI file ,Can be null（the template POI filesystem that contains the Workbook
-     *            stream)
-     * @param outputStream
-     *            the java OutputStream you wish to write the value to
-     * @param typeEnum
-     *            03 or 07
+     * @param templateInputStream Append value after a POI file ,Can be null（the template POI filesystem that contains the Workbook
+     *                            stream)
+     * @param outputStream        the java OutputStream you wish to write the value to
+     * @param typeEnum            03 or 07
      * @deprecated please use {@link com.alibaba.excel.write.builder.ExcelWriterBuilder} build ExcelWriter
      */
     @Deprecated
     public ExcelWriter(InputStream templateInputStream, OutputStream outputStream, ExcelTypeEnum typeEnum,
-        Boolean needHead) {
+                       Boolean needHead) {
         this(templateInputStream, outputStream, typeEnum, needHead, null);
     }
 
     /**
      * Create new writer
      *
-     * @param templateInputStream
-     *            Append value after a POI file ,Can be null（the template POI filesystem that contains the Workbook
-     *            stream)
-     * @param outputStream
-     *            the java OutputStream you wish to write the value to
-     * @param typeEnum
-     *            03 or 07
-     * @param writeHandler
-     *            User-defined callback
+     * @param templateInputStream Append value after a POI file ,Can be null（the template POI filesystem that contains the Workbook
+     *                            stream)
+     * @param outputStream        the java OutputStream you wish to write the value to
+     * @param typeEnum            03 or 07
+     * @param writeHandler        User-defined callback
      * @deprecated please use {@link com.alibaba.excel.write.builder.ExcelWriterBuilder} build ExcelWriter
      */
     @Deprecated
     public ExcelWriter(InputStream templateInputStream, OutputStream outputStream, ExcelTypeEnum typeEnum,
-        Boolean needHead, WriteHandler writeHandler) {
+                       Boolean needHead, WriteHandler writeHandler) {
         List<WriteHandler> customWriteHandlerList = new ArrayList<WriteHandler>();
         customWriteHandlerList.add(writeHandler);
         WriteWorkbook writeWorkbook = new WriteWorkbook();
@@ -130,10 +117,8 @@ public class ExcelWriter {
     /**
      * Write data to a sheet
      *
-     * @param data
-     *            Data to be written
-     * @param writeSheet
-     *            Write to this sheet
+     * @param data       Data to be written
+     * @param writeSheet Write to this sheet
      * @return this current writer
      */
     public ExcelWriter write(List data, WriteSheet writeSheet) {
@@ -143,12 +128,9 @@ public class ExcelWriter {
     /**
      * Write value to a sheet
      *
-     * @param data
-     *            Data to be written
-     * @param writeSheet
-     *            Write to this sheet
-     * @param writeTable
-     *            Write to this table
+     * @param data       Data to be written
+     * @param writeSheet Write to this sheet
+     * @param writeTable Write to this table
      * @return this
      */
     public ExcelWriter write(List data, WriteSheet writeSheet, WriteTable writeTable) {
@@ -159,10 +141,8 @@ public class ExcelWriter {
     /**
      * Write data to a sheet
      *
-     * @param data
-     *            Data to be written
-     * @param sheet
-     *            Write to this sheet
+     * @param data  Data to be written
+     * @param sheet Write to this sheet
      * @return this current writer
      * @deprecated please use {@link ExcelWriter#write(List, WriteSheet)}
      */
@@ -174,14 +154,11 @@ public class ExcelWriter {
     /**
      * Write value to a sheet
      *
-     * @param data
-     *            Data to be written
-     * @param sheet
-     *            Write to this sheet
-     * @param table
-     *            Write to this table
+     * @param data  Data to be written
+     * @param sheet Write to this sheet
+     * @param table Write to this table
      * @return this
-     * @deprecated * @deprecated please use {@link ExcelWriter#write(List, WriteSheet,WriteTable)}
+     * @deprecated * @deprecated please use {@link ExcelWriter#write(List, WriteSheet, WriteTable)}
      */
     @Deprecated
     public ExcelWriter write(List data, Sheet sheet, Table table) {
@@ -211,10 +188,8 @@ public class ExcelWriter {
     /**
      * Write data to a sheet
      *
-     * @param data
-     *            Data to be written
-     * @param sheet
-     *            Write to this sheet
+     * @param data  Data to be written
+     * @param sheet Write to this sheet
      * @return this current writer
      * @deprecated please use {@link ExcelWriter#write(List, WriteSheet)}
      */
@@ -226,14 +201,11 @@ public class ExcelWriter {
     /**
      * Write value to a sheet
      *
-     * @param data
-     *            Data to be written
-     * @param sheet
-     *            Write to this sheet
-     * @param table
-     *            Write to this table
+     * @param data  Data to be written
+     * @param sheet Write to this sheet
+     * @param table Write to this table
      * @return this
-     * @deprecated * @deprecated please use {@link ExcelWriter#write(List, WriteSheet,WriteTable)}
+     * @deprecated * @deprecated please use {@link ExcelWriter#write(List, WriteSheet, WriteTable)}
      */
     @Deprecated
     public ExcelWriter write0(List data, Sheet sheet, Table table) {
@@ -243,10 +215,8 @@ public class ExcelWriter {
     /**
      * Write data to a sheet
      *
-     * @param data
-     *            Data to be written
-     * @param sheet
-     *            Write to this sheet
+     * @param data  Data to be written
+     * @param sheet Write to this sheet
      * @return this current writer
      * @deprecated please use {@link ExcelWriter#write(List, WriteSheet)}
      */
@@ -258,14 +228,11 @@ public class ExcelWriter {
     /**
      * Write value to a sheet
      *
-     * @param data
-     *            Data to be written
-     * @param sheet
-     *            Write to this sheet
-     * @param table
-     *            Write to this table
+     * @param data  Data to be written
+     * @param sheet Write to this sheet
+     * @param table Write to this table
      * @return this
-     * @deprecated * @deprecated please use {@link ExcelWriter#write(List, WriteSheet,WriteTable)}
+     * @deprecated * @deprecated please use {@link ExcelWriter#write(List, WriteSheet, WriteTable)}
      */
     @Deprecated
     public ExcelWriter write1(List data, Sheet sheet, Table table) {
@@ -275,14 +242,10 @@ public class ExcelWriter {
     /**
      * Merge Cells，Indexes are zero-based.
      *
-     * @param firstRow
-     *            Index of first row
-     * @param lastRow
-     *            Index of last row (inclusive), must be equal to or larger than {@code firstRow}
-     * @param firstCol
-     *            Index of first column
-     * @param lastCol
-     *            Index of last column (inclusive), must be equal to or larger than {@code firstCol}
+     * @param firstRow Index of first row
+     * @param lastRow  Index of last row (inclusive), must be equal to or larger than {@code firstRow}
+     * @param firstCol Index of first column
+     * @param lastCol  Index of last column (inclusive), must be equal to or larger than {@code firstCol}
      * @deprecated please use{@link OnceAbsoluteMergeStrategy}
      */
     @Deprecated
