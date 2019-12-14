@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gupao-session-demo:war">
+    <output-path>$PROJECT_DIR$/gupao-session-demo/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>gupao-session-demo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="gupao-session-demo.war">
+      <element id="artifact" artifact-name="gupao-session-demo:war exploded" />
+    </root>
+  </artifact>
+</component>

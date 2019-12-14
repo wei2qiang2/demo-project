@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-mvc-rest" />
+        <module name="single-design-pattern" />
+        <module name="session-demo" />
+        <module name="abstract-factory-design-pattern" />
+        <module name="gupao-session-demo" />
+        <module name="spring-boot-mybatis-demo" />
+        <module name="active-mq-demo1-producer" />
+        <module name="aop-demo" />
+        <module name="active-mq-demo1-consumer" />
+        <module name="event-demo" />
+        <module name="spring-application" />
+        <module name="redis-demo" />
+        <module name="spring-boot-demo" />
+        <module name="factory-design-pattern" />
+        <module name="jvm-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="abstract-factory-design-pattern" target="1.5" />
+      <module name="active-mq-demo1-consumer" target="1.5" />
+      <module name="active-mq-demo1-producer" target="1.5" />
+      <module name="activivemq-demo-parent" target="1.5" />
+      <module name="aop-demo" target="1.5" />
+      <module name="design-demo" target="1.5" />
+      <module name="event-demo" target="1.5" />
+      <module name="factory-design-pattern" target="1.5" />
+      <module name="gupao-demo-project" target="1.5" />
+      <module name="gupao-session-demo" target="1.7" />
+      <module name="jvm-demo" target="6" />
+      <module name="microservice-parent" target="1.5" />
+      <module name="redis-demo" target="1.5" />
+      <module name="session-demo" target="1.7" />
+      <module name="single-design-pattern" target="1.5" />
+      <module name="spring-application" target="1.8" />
+      <module name="spring-boot-demo" target="1.5" />
+      <module name="spring-boot-mybatis-demo" target="1.5" />
+      <module name="spring-demo" target="1.5" />
+      <module name="spring-mvc-rest" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-application" options="-parameters" />
+      <module name="spring-mvc-rest" options="-parameters" />
+    </option>
+  </component>
+</project>
