@@ -1,0 +1,57 @@
+// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://kpdus.tripod.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   EnumSingleton.java
+
+package com.demo.pattern.regist.enums;
+
+import java.io.IOException;
+
+public final class EnumSingleton extends Enum
+{
+
+    public static EnumSingleton[] values()
+    {
+        return (EnumSingleton[])$VALUES.clone();
+    }
+
+    public static EnumSingleton valueOf(String name)
+    {
+        return (EnumSingleton)Enum.valueOf(com/demo/pattern/regist/enums/EnumSingleton, name);
+    }
+
+    private EnumSingleton(String s, int i)
+    {
+        super(s, i);
+    }
+
+    public static EnumSingleton getInstance()
+    {
+        return INSTANCE;
+    }
+
+    public Object getData()
+    {
+        return data;
+    }
+
+    public void setData(Object data)
+        throws IOException
+    {
+        this.data = data;
+    }
+
+    public static final EnumSingleton INSTANCE;
+    private Object data;
+    private static final EnumSingleton $VALUES[];
+
+    // 饿汉式的单例，本身就是线程安全的
+    // 只需要看如何避免 序列化破坏单例的
+    static 
+    {
+        INSTANCE = new EnumSingleton("INSTANCE", 0);
+        $VALUES = (new EnumSingleton[] {
+            INSTANCE
+        });
+    }
+}
